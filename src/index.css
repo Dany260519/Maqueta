@@ -1,13 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,600&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Cabin Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #ebebeb;
+  min-width: 1260px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+#navs {
+  font-size: 1.2em;
+  white-space: nowrap;
+}
+
+#navs, #footer, #signIn {
+  display: block;
+  clear: both;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#logo{
+  background-color: black;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+#logo, #search, .linksDesing, #positionRight {
+  position: static;
+}
+
+#logo, #footer, #links, #hello, #returns {
+  color: aliceblue;
+}
+
+#logo, #logoLink, #location, .account, #selectOption, #buttonSearch, #languageOption, #links {
+  align-items: center;
+}
+
+
+#logo-bar {
+  display: flex;
+  height: 55px;
+  justify-content: center;
+}
+
+#logoLink {
+  padding: 15px 5px;
+}
+
+#logoAmazon {
+  width: 100px;
+  padding: 0 5px;
+}
+
+
+#location, .account {
+  font-family: inherit;
+  float: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+#components, .spanText {
+  display: flex;
+  padding: 0 10px;
+}
+
+#new {
+  padding-top: 24px;
+  font-size: 14px;
+  padding-right: 3px;
+}
+
+.small {
+  color: rgba(240, 248, 255, 0.767);
+  margin-top: 0;
+  padding-right: 0;
+  font-size: 13px;
+  font-weight: 400;
+  float: left;
+  padding-top: 10px;
+}
+
+.underTheSmall {
+  margin: 0;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 700;
+  float: left;
+  padding-bottom: 5px;
+  padding-right: 0;
+}
+
+
+
+#search {
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.diagonal-form {
+  display: flex;
+}
+
+#selectOption {
+  width: 50px;
+  padding: 5px;
+  color: rgb(101, 94, 94);
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  background-color: rgb(231, 229, 229);
+  outline: none;
+}
+
+#selectOption:hover {
+  color: black;
+  background-color: rgb(211, 210, 210);
+}
+
+#inputSearch {
+  width: 300px;
+  border: none;
+  outline: none;
+}
+
+
+
+.diagonal-form.focused {
+  border: 3px solid rgb(252, 197, 96);
+}
+
+
+#buttonSearch {
+  width: 2.5em;
+  font-size: large;
+  padding: 0.5em;
+  background-color: #ffbe68;
+  border: none;
+}
+
+#buttonSearch:hover {
+  background-color: #eea84c;
+}
+
+#language{
+  padding: 10px 5px;
+}
+
+#languageOption {
+  display: flex;
+  font-size: 15px;
+  padding: 7px 5px;
+  font-weight: 700;
+  margin: 3px 5px;
+}
+
+#flag{
+  width: 20px;
+  height: 15px;
+  margin: 0 5px;
+}
+
+.textAccount {
+  text-align: start;
+  padding: 0 5px;
+}
+
+
+#cart {
+  padding: 5px;
+}
+
+#cartObjects {
+  display: flex;
+  padding: 0 5px;
+}
+
+#icoCart {
+  margin: 0 3px;
+  font-size: 35px;
+
+}
+
+#textCart {
+  padding-top: 20px;
+}
+
+.navItems {
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+
+
+
+
+#links {
+  background-color: rgb(35, 39, 53);
+  height: 40px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#links a {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+#links, #logos {
+  color: white;
+  text-decoration: none;
+  transition: border-color 0.3s;
+}
+
+#flex{
+  display: flex;
+  margin: 0 10px;
+}
+
+#navs a:hover {
+  border: 1px solid white;
+}
+
+
+.linksDesing {
+  padding: 10px;
+}
+
+#positionRight {
+  display: flex;
+  margin-right: 10px;
+}
+
+#linkR {
+  padding: 3px 5px;
+}
+
+
+
+
+
+
+#right {
+  padding: 10px;
+  margin: 10px;
+}
+
+.ImgContent {
+  background: #ffffff;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 290px;
+  height: 400px;
+  margin: 5px;
+}
+
+#linkButton {
+  height: 120px;
+}
+
+#linkImg {
+  height: 250px;
+  margin-top: 10px;
+}
+
+.order {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea tres columnas iguales por fila */
+    gap: 2px; 
+    position: relative;
+    left: 2px;
+}
+
+.smallImg {
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+}
+
+.smallimg {
+  width: 120px;
+  height: 80px;
+}
+
+.imgs {
+  width: 260px;
+  height: 300px;
+  position: relative;
+  left: 5px;
+}
+
+.aling {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crea tres columnas iguales por fila */
+  gap: 5px;
+  max-width: 1235px;
+}
+
+
+.alingL {
+  background-color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  clear: both;
+  position: relative;
+  left: 5px;
+  margin: 10px 0;
+  max-width: 1210px;
+}
+
+.large {
+  text-align: start;
+}
+
+.order2 {
+  padding: 0 10px;
+}
+
+.division {
+  padding: 0 15px;
+}
+
+.smallsmall {
+  display: flex;
+  flex-direction: row;
+}
+
+.bigI {
+  width: 260px;
+  height: 150px;
+}
+
+.little {
+  width: 80px;
+  height: 80px;
+}
+
+.imgSmall {
+  margin: 5px;
+  width: 80px;
+  text-align: start;
+  position: relative;
+  right: 5px;
+}
+
+.title, .bigI {
+  position: relative;
+  left: 5px;
+}
+
+
+
+
+
+#signIn {
+  background: #ffffff;
+}
+
+
+
+
+
+
+#footLink {
+  background-color: #32455a;
+  text-align: center;
+}
+
+#centerF {
+  padding: 10px 0;
+} 
+
+#footLink :hover {
+  cursor: pointer;
+  background-color: #435569;
+}
+
+#middle {
+  background-color: #232F3E;
+}
+
+.objF {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  margin: 0 80px;
+}
+
+.Efoot .Elink {
+  display: flex;
+  flex-direction: column;
+}
+
+.Efoot {
+  margin: 60px;
+}
+
+#fourt {
+  width: 137px;
+}
+
+#first {
+  width: 120px;
+}
+
+#second {
+  width: 165px;
+}
+
+.miniE {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffffa4;
+  
+}
+
+.Elink {
+  margin: 0;
+  padding: 0 5px;
+}
+
+.miniE:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.padd {
+  padding: 5px 0;
+  margin: 0;
+}
+
+.headF {
+  font-size: 18px;
+  font-weight: 900;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+
+#symbol {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  bottom: 2px;
+}
+
+#footerHR {
+  border: none; 
+  height: 1px;
+  background-color: #6f748046;
+  margin: 20px 0;
+}
+
+#LanguageF {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 0 30px 0;
+  margin: 0 25%;
+}
+
+#imgF {
+  width: 90px;
+  padding: 5px;
+}
+
+.pointer {
+  margin: 0 40px;
+}
+
+#logoF, .borderE {
+  cursor: pointer;
+}
+
+.borderE {
+ display: flex;
+ flex-direction: row;
+ margin: 3px;
+ border: solid 0.5px rgba(179, 177, 177, 0.623);
+ border-radius: 3px;
+ padding: 7px 5px;
+ width: 150px;
+ height: 35px;
+ font-size: 15px;
+ color: #ffffffa4;
+ position: relative;
+ bottom: 10px;
+}
+
+#lang {
+  width: 120px;
+}
+
+#icoLang {
+  padding: 0 5px;
+  margin: 1px;
+}
+
+#information {
+  display: flex;
+  height: 35px;
+  text-align: start;
+} 
+
+#flagF {
+  width: 30px;
+  height: 15px;
+  padding: 0 5px;
+  margin: 2px;
+}
+
+
+#lastOne {
+  background-color: #131A22;
+  color: #ffffffc4;
+  padding: 10px 0;
+}
+
+#middleObj {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Crea tres columnas iguales por fila */
+  gap: 5px;
+  position: relative;
+  left: 100px;
+  padding: 10px 5px;
+  width: 1100px;
+}
+
+.minifooters {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px 10px;
+}
+
+.headLink {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  text-align: start;
+}
+
+.headLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.contentF {
+  color: #bebebead;
+  font-weight: 100;
+}
+
+.centerElements {
+  position: relative;
+  left: 155px;
+}
+
+.polit, #com {
+  margin: 3px;
+  padding: 5px;
+  font-size: 12px;
+  color: #ebebeb;
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+#conditions {
+  padding: 10px 0;
+  margin: 10px 0;
 }

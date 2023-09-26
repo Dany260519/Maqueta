@@ -1,0 +1,41 @@
+Para lograr que al hacer clic en un elemento se aplique un borde amarillo y que al hacer clic en cualquier otro lugar se elimine completamente el borde, puedes utilizar CSS y JavaScript. Aquí tienes una implementación:
+
+
+import React, { useState } from 'react';
+
+function DiagonalForm() {
+  const [inputClicked, setInputClicked] = useState(false);
+
+  const handleInputClick = () => {
+    setInputClicked(true);
+  };
+
+  const handleDocumentClick = (e) => {
+    if (!e.target.matches('#diagonal-form *')) {
+      setInputClicked(false);
+    }
+  };
+
+  document.addEventListener('click', handleDocumentClick);
+
+  return (
+    <div id="diagonal-form" className={`diagonal-form ${inputClicked ? 'focused' : ''}`}>
+      <input
+        type="text"
+        onClick={handleInputClick}
+        placeholder="Haga clic aquí"
+      />
+    </div>
+  );
+}
+
+export default DiagonalForm;
+En esta implementación:
+
+Utilizamos el estado inputClicked para rastrear si se hizo clic en el elemento.
+
+En el onClick del input, establecemos inputClicked en true para aplicar el borde amarillo.
+
+Agregamos un evento click al documento (document.addEventListener) para escuchar los clics en cualquier lugar fuera del formulario. En la función handleDocumentClick, verificamos si el objetivo del clic no está dentro del elemento con el id "diagonal-form" utilizando !e.target.matches('#diagonal-form *'). Si se hace clic fuera del formulario, establecemos inputClicked en false para eliminar el borde amarillo.
+
+Esta implementación asegurará que al hacer clic en cualquier otro lugar fuera del formulario, se elimine completamente el borde, dejando el elemento en su estado original.

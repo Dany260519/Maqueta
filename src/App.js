@@ -1,27 +1,16 @@
 import './App.css';
+import Foot from './components/Foot';
+import Img from './components/Img';
+import Logos from './components/Logos';
+import SignIn from './components/SignIn';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <Logos />
+      <Img />
+      <SignIn />
+      <Foot />
     </div>
   );
 }
